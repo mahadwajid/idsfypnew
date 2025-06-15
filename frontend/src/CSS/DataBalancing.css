@@ -1,0 +1,481 @@
+.data-main-container {
+    padding: 2rem 1.8rem; /* Reduced padding */
+    max-width: 1200px; /* Reduced from 1400px */
+    margin: 0 auto; /* Center the container */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Modern font */
+    background-color: #f8fafc; /* Light background for the page */
+    border-radius: 12px; /* Slight roundness */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Reduced gap */
+  }
+  
+  .page-main-heading {
+    font-size: 2rem; /* Reduced from 2.2rem */
+    font-weight: 800;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 2rem; /* Reduced from 2.5rem */
+    letter-spacing: -0.04em;
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.02);
+  }
+
+  .dataset-current-info {
+    font-size: 1.1rem; /* Reduced from 1.2rem */
+    font-weight: 600;
+    color: #475569;
+    text-align: center;
+    margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+    padding: 0.8rem; /* Reduced from 1rem */
+    background-color: #e0f2f7; /* A light, subtle background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #a7d9f0;
+  }
+  
+  .text-container {
+    background: #ffffff;
+    border-radius: 16px; /* Larger border radius for cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    padding: 1.8rem; /* Reduced from 2rem */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    gap: 1.2rem; /* Reduced from 1.5rem */
+    border: 1px solid #e2e8f0; /* Subtle border */
+    margin-bottom: 2rem; /* Reduced from 2.5rem */
+  }
+  
+  .apply-button-1, .clear-button {
+    padding: 0.7rem 1.6rem; /* Reduced padding */
+    border: none;
+    border-radius: 10px; /* Rounded buttons */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem; /* Reduced from 1rem */
+    transition: all 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Button shadow */
+    width: auto; /* Allow buttons to size naturally */
+    display: inline-flex; /* For icon alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem; /* Reduced from 0.5rem */
+  }
+  
+  .apply-button-1 {
+    background-color: #22c55e; /* Green for apply */
+    color: white;
+  }
+  
+  .apply-button-1:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .apply-button-1:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .clear-button {
+    background-color: #ef4444; /* Red for clear */
+    color: white;
+  }
+  
+  .clear-button:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .summary-container {
+    display: flex; /* Use flexbox for main sections */
+    flex-direction: column;
+    gap: 2rem; /* Reduced from 2.5rem */
+  }
+
+  .section-heading {
+    font-size: 1.6rem; /* Reduced from 1.8rem */
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* Reduced from 0.75rem */
+    justify-content: center;
+  }
+
+  .section-heading svg {
+    color: #4299e1;
+    font-size: 1.6rem; /* Reduced from 1.8rem */
+  }
+  
+  /* General Card Styles */
+  .MuiCard-root {
+    background: linear-gradient(180deg, #ffffff, #f7f9fc); /* Subtle gradient background */
+    border-radius: 16px; /* Consistent border-radius */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+    border: 1px solid #e2e8f0; /* Consistent border */
+    padding: 1.8rem; /* Reduced from 2rem */
+    transition: all 0.3s ease;
+  }
+
+  .MuiCard-root:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .MuiCardHeader-root {
+    padding: 0 0 1.2rem 0; /* Reduced from 1.5rem */
+    text-align: center;
+  }
+
+  .MuiCardHeader-title {
+    font-size: 1.3rem !important; /* Reduced from 1.5rem */
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem; /* Reduced from 0.75rem */
+  }
+
+  .MuiCardHeader-title svg {
+    color: #4299e1;
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+  }
+  
+  .summary-section-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Reduced from 2.5rem */
+    margin-bottom: 0; /* Managed by parent .summary-container */
+  }
+  
+  .summary-section, .summary-graph {
+    flex: 1; /* Distribute space equally */
+    background-color: transparent; /* Card styles handled by .MuiCard-root */
+    padding: 0; /* Padding handled by .MuiCard-root */
+    border: none; /* Border handled by .MuiCard-root */
+    box-shadow: none; /* Shadow handled by .MuiCard-root */
+  }
+
+  .summary-table {
+    width: 100%;
+    border-collapse: separate; /* For rounded corners */
+    border-spacing: 0; /* Remove default spacing */
+    margin-top: 1.2rem; /* Space below heading */
+    background-color: #f8fafc; /* Light background for table */
+    border-radius: 10px; /* Rounded corners for table */
+    overflow: hidden; /* Ensures rounded corners are visible */
+  }
+  
+  .summary-table th, .summary-table td {
+    padding: 10px 12px; /* Reduced from 12px 15px */
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0; /* Subtle border */
+    font-size: 0.9rem; /* Reduced from 0.95rem */
+    color: #334155;
+  }
+  
+  .summary-table th {
+    background-color: #e2e8f0; /* Header background */
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1;
+  }
+
+  .summary-table tr:last-child td {
+    border-bottom: none; /* No border on last row */
+  }
+
+  .summary-table tbody tr:nth-of-type(even) {
+    background-color: #f0f4f8; /* Zebra striping */
+  }
+
+  .summary-table tbody tr:hover {
+    background-color: #e6eaf0; /* Hover effect */
+  }
+  
+  .chart-container-GAN {
+    width: 100%;
+    padding: 0; /* Padding handled by CardContent */
+    background-color: transparent; /* Handled by MuiCard-root */
+    border: none; /* Handled by MuiCard-root */
+    border-radius: 10px;
+    box-shadow: none; /* Handled by MuiCard-root */
+    margin-top: 1.2rem; /* Space below table */
+    height: 300px; /* Explicitly set a height for the chart container */
+  }
+  
+  /* New styles for total samples summary */
+  .total-samples-card,
+  .generation-summary-card,
+  .metrics-card {
+    margin-bottom: 0; /* Managed by parent .summary-container gap */
+    background-color: transparent; /* Handled by .MuiCard-root */
+    border: none; /* Handled by .MuiCard-root */
+    box-shadow: none; /* Handled by .MuiCard-root */
+  }
+  
+  .samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Adjusted minmax for smaller items */
+    gap: 1.2rem; /* Reduced from 1.5rem */
+    padding: 0.8rem 0; /* Reduced from 1rem */
+  }
+  
+  .sample-item {
+    text-align: center;
+    padding: 1.2rem; /* Reduced from 1.5rem */
+    background-color: #edf2f7; /* Lighter background */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .sample-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .sample-item h4 {
+    margin: 0 0 0.4rem 0; /* Reduced from 0.5rem */
+    color: #475569;
+    font-size: 0.9rem; /* Reduced from 1rem */
+    font-weight: 600;
+  }
+  
+  .sample-item p {
+    margin: 0;
+    font-size: 1.6rem; /* Reduced from 1.8rem */
+    font-weight: 700;
+    color: #2563eb; /* A vibrant blue */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .data-main-container {
+      padding: 1.2rem; /* Reduced from 1.5rem */
+      gap: 1.8rem; /* Reduced from 2rem */
+    }
+
+    .page-main-heading {
+      font-size: 1.6rem; /* Reduced from 1.8rem */
+      margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+    }
+
+    .dataset-current-info {
+      margin-bottom: 0.8rem; /* Reduced from 1rem */
+      padding: 0.6rem; /* Reduced from 0.8rem */
+      font-size: 1rem; /* Reduced from 1.1rem */
+    }
+  
+    .text-container {
+      padding: 1.2rem; /* Reduced from 1.5rem */
+      gap: 0.8rem; /* Reduced from 1rem */
+      margin-bottom: 1.5rem; /* Reduced from 2rem */
+    }
+  
+    .apply-button-1, .clear-button {
+      padding: 0.6rem 1.2rem; /* Reduced padding */
+      font-size: 0.9rem; /* Reduced from 0.95rem */
+    }
+
+    .summary-container {
+      gap: 1.8rem; /* Reduced from 2rem */
+    }
+
+    .section-heading {
+      font-size: 1.3rem; /* Reduced from 1.5rem */
+      margin-bottom: 1rem;
+    }
+
+    .section-heading svg {
+      font-size: 1.3rem;
+    }
+
+    .MuiCard-root {
+      padding: 1.2rem; /* Reduced from 1.5rem */
+    }
+
+    .MuiCardHeader-title {
+      font-size: 1.1rem !important; /* Reduced from 1.2rem */
+    }
+
+    .MuiCardHeader-title svg {
+      font-size: 1.1rem; /* Reduced from 1.2rem */
+    }
+  
+    .summary-section-row {
+      gap: 1.8rem; /* Reduced from 2rem */
+    }
+  
+    .summary-table th, .summary-table td {
+      padding: 8px 10px; /* Reduced from 10px 12px */
+      font-size: 0.85rem; /* Reduced from 0.9rem */
+    }
+  
+    .samples-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted minmax */
+      gap: 0.8rem; /* Reduced from 1rem */
+      padding: 0.6rem 0;
+    }
+  
+    .sample-item {
+      padding: 1rem; /* Reduced from 1.2rem */
+    }
+  
+    .sample-item h4 {
+      font-size: 0.85rem;
+    }
+  
+    .sample-item p {
+      font-size: 1.4rem; /* Reduced from 1.5rem */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .data-main-container {
+      padding: 0.8rem; /* Reduced from 1rem */
+      gap: 1.2rem; /* Reduced from 1.5rem */
+    }
+  
+    .page-main-heading {
+      font-size: 1.5rem; /* Reduced from 1.8rem */
+      margin-bottom: 0.8rem; /* Reduced from 1rem */
+    }
+
+    .dataset-current-info {
+      margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+      padding: 0.5rem; /* Reduced from 0.6rem */
+      font-size: 0.9rem; /* Reduced from 1rem */
+    }
+
+    .text-container {
+      padding: 1rem;
+      gap: 0.6rem; /* Reduced from 1rem */
+      margin-bottom: 1rem; /* Reduced from 1.5rem */
+    }
+  
+    .apply-button-1, .clear-button {
+      width: 100%; /* Full width buttons */
+      padding: 0.6rem 0.8rem; /* Reduced padding */
+      font-size: 0.85rem; /* Reduced from 0.9rem */
+    }
+
+    .summary-container {
+      gap: 1.2rem; /* Reduced from 1.5rem */
+    }
+
+    .section-heading {
+      font-size: 1.1rem; /* Reduced from 1.3rem */
+      margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+      gap: 0.4rem; /* Reduced from 0.5rem */
+    }
+
+    .section-heading svg {
+      font-size: 1.1rem; /* Reduced from 1.3rem */
+    }
+  
+    .summary-section-row {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 1.2rem; /* Reduced from 1.5rem */
+    }
+    
+    .summary-section, .summary-graph {
+      width: 100%;
+    }
+
+    .MuiCard-root {
+      padding: 0.8rem; /* Reduced from 1rem */
+    }
+
+    .MuiCardHeader-title {
+      font-size: 0.9rem !important; /* Reduced from 1rem */
+    }
+
+    .MuiCardHeader-title svg {
+      font-size: 0.9rem; /* Reduced from 1rem */
+    }
+  
+    .summary-table th, .summary-table td {
+      padding: 6px 8px; /* Reduced from 8px 10px */
+      font-size: 0.75rem; /* Reduced from 0.8rem */
+    }
+  
+    .samples-grid {
+      grid-template-columns: 1fr; /* Stack sample items vertically */
+      gap: 0.6rem; /* Reduced from 0.75rem */
+      padding: 0.4rem 0;
+    }
+  
+    .sample-item {
+      padding: 0.8rem; /* Reduced from 1rem */
+    }
+  
+    .sample-item h4 {
+      font-size: 0.75rem;
+    }
+  
+    .sample-item p {
+      font-size: 1.1rem; /* Reduced from 1.3rem */
+    }
+  }
+  
+  /* Progress Bar Styles (Reused from Preprocessing.css) */
+  .progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .progress-bar {
+    width: 60%;
+    max-width: 500px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    transition: width 0.3s ease-in-out;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .progress-text {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+  }
+  
+  
