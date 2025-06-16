@@ -120,7 +120,7 @@ function Home() {
                 )}
 
                 <button 
-                    className="done-button" 
+                    className="home-upload-done-button" 
                     onClick={handleUpload}
                     disabled={!file}
                 >

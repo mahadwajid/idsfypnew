@@ -37,50 +37,47 @@
     flex-wrap: wrap;
 }
 
-.intrusion-btn {
+.intrusion-detection-detect-button,
+.intrusion-detection-continue-button,
+.intrusion-detection-clear-button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.intrusion-detect-btn {
-    background-color: #3498db;
+.intrusion-detection-detect-button {
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
-.intrusion-detect-btn:hover {
-    background-color: #2980b9;
+.intrusion-detection-detect-button:hover {
+    background-color: #45a049;
 }
 
-.intrusion-detect-btn:disabled {
-    background-color: #95a5a6;
+.intrusion-detection-detect-button:disabled {
+    background-color: #cccccc;
     cursor: not-allowed;
 }
 
-.intrusion-continue-btn {
-    background-color: #2ecc71;
+.intrusion-detection-continue-button {
+    background-color: #2196F3; /* Blue */
     color: white;
 }
 
-.intrusion-continue-btn:hover {
-    background-color: #27ae60;
+.intrusion-detection-continue-button:hover {
+    background-color: #1976D2;
 }
 
-.intrusion-clear-btn {
-    background-color: #e74c3c;
+.intrusion-detection-clear-button {
+    background-color: #f44336; /* Red */
     color: white;
 }
 
-.intrusion-clear-btn:hover {
-    background-color: #c0392b;
-}
-
-.intrusion-clear-btn:disabled {
-    background-color: #95a5a6;
-    cursor: not-allowed;
+.intrusion-detection-clear-button:hover {
+    background-color: #da190b;
 }
 
 .intrusion-storage-info {

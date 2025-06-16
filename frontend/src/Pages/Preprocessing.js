@@ -378,10 +378,10 @@ function Preprocessing() {
                 </div>
               </div>
               <div className="action-buttons">
-                <button type="button" className="apply-button" onClick={handleApply}>
+                <button type="button" className="preprocessing-apply-button" onClick={handleApply}>
                   Apply
                 </button>
-                <button type="button" className="clear-button" onClick={handleClear}>
+                <button type="button" className="preprocessing-clear-button" onClick={handleClear}>
                   Clear
                 </button>
               </div>

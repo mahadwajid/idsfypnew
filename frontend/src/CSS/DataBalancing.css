@@ -47,46 +47,42 @@
     margin-bottom: 2rem; /* Reduced from 2.5rem */
   }
   
-  .apply-button-1, .clear-button {
-    padding: 0.7rem 1.6rem; /* Reduced padding */
+  .data-balancing-fetch-balance-button,
+  .data-balancing-clear-button {
+    padding: 0.8rem 1.8rem;
     border: none;
-    border-radius: 10px; /* Rounded buttons */
+    border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.95rem; /* Reduced from 1rem */
-    transition: all 0.3s ease; /* Smooth transitions */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Button shadow */
-    width: auto; /* Allow buttons to size naturally */
-    display: inline-flex; /* For icon alignment */
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem; /* Reduced from 0.5rem */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
   
-  .apply-button-1 {
+  .data-balancing-fetch-balance-button {
     background-color: #22c55e; /* Green for apply */
     color: white;
   }
   
-  .apply-button-1:hover {
+  .data-balancing-fetch-balance-button:hover {
     background-color: #16a34a;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .apply-button-1:disabled {
+  .data-balancing-fetch-balance-button:disabled {
     background-color: #9ca3af;
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
   }
 
-  .clear-button {
+  .data-balancing-clear-button {
     background-color: #ef4444; /* Red for clear */
     color: white;
   }
   
-  .clear-button:hover {
+  .data-balancing-clear-button:hover {
     background-color: #dc2626;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -285,7 +281,8 @@
       margin-bottom: 1.5rem; /* Reduced from 2rem */
     }
   
-    .apply-button-1, .clear-button {
+    .data-balancing-fetch-balance-button,
+    .data-balancing-clear-button {
       padding: 0.6rem 1.2rem; /* Reduced padding */
       font-size: 0.9rem; /* Reduced from 0.95rem */
     }
@@ -366,7 +363,8 @@
       margin-bottom: 1rem; /* Reduced from 1.5rem */
     }
   
-    .apply-button-1, .clear-button {
+    .data-balancing-fetch-balance-button,
+    .data-balancing-clear-button {
       width: 100%; /* Full width buttons */
       padding: 0.6rem 0.8rem; /* Reduced padding */
       font-size: 0.85rem; /* Reduced from 0.9rem */

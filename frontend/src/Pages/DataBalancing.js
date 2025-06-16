@@ -129,11 +129,11 @@ const DataBalancing = () => {
         <>
           <h3 className="dataset-current-info">Currently Balancing: {datasetName}</h3>
           <div className="text-container">
-            <button onClick={handleBalanceDataset} disabled={loading} className="apply-button-1">
+            <button onClick={handleBalanceDataset} disabled={loading} className="data-balancing-fetch-balance-button">
               {loading ? <><FaSyncAlt className="icon-spin" /> Processing...</> : <><FaPlay /> Fetch & Balance Dataset</>}
             </button>
             {summary && (
-              <button onClick={handleClearData} className="clear-button">
+              <button onClick={handleClearData} className="data-balancing-clear-button">
                 <FaBroom /> Clear Data
               </button>
             )}

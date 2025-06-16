@@ -135,17 +135,17 @@ function IntrusionDetection({ onContinue }) {
                     <div className="intrusion-control-panel">
                         <div className="intrusion-action-btns">
                             <button 
-                                className="intrusion-btn intrusion-detect-btn" 
+                                className="intrusion-detection-detect-button" 
                                 onClick={handleDetectIntrusions}
                                 disabled={loading}
                             >
                                 {loading ? "Detecting..." : "Detect Intrusions"}
                             </button>
-                            <button className="intrusion-btn intrusion-continue-btn" onClick={onContinue}>
+                            <button className="intrusion-detection-continue-button" onClick={onContinue}>
                                 Continue with Analysis
                             </button>
                             <button 
-                                className="intrusion-btn intrusion-clear-btn" 
+                                className="intrusion-detection-clear-button" 
                                 onClick={handleClearData}
                                 disabled={!metrics && results.length === 0}
                             >

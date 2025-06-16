@@ -119,10 +119,11 @@
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
+    width: 100%;
   }
   
-  .apply-button,
-  .clear-button {
+  .preprocessing-apply-button,
+  .preprocessing-clear-button {
     padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 10px;
@@ -133,30 +134,30 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
   
-  .apply-button {
+  .preprocessing-apply-button {
     background-color: #22c55e;
     color: white;
   }
   
-  .apply-button:hover {
+  .preprocessing-apply-button:hover {
     background-color: #16a34a;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .apply-button:disabled {
+  .preprocessing-apply-button:disabled {
     background-color: #9ca3af;
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
   }
   
-  .clear-button {
+  .preprocessing-clear-button {
     background-color: #ef4444;
     color: white;
   }
   
-  .clear-button:hover {
+  .preprocessing-clear-button:hover {
     background-color: #dc2626;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -540,8 +541,8 @@
         gap: 1rem;
     }
   
-    .apply-button,
-    .clear-button {
+    .preprocessing-apply-button,
+    .preprocessing-clear-button {
         width: 100%;
         padding: 0.7rem 1rem;
         font-size: 0.9rem;

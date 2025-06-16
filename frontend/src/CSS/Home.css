@@ -144,8 +144,8 @@
     transition: width 0.3s ease;
 }
 
-/* Done Button */
-.done-button {
+/* Home Upload Done Button */
+.home-upload-done-button {
     width: 100%;
     padding: 12px;
     background-color: #00BCD4;
@@ -158,11 +158,11 @@
     transition: background-color 0.3s ease;
 }
 
-.done-button:hover {
+.home-upload-done-button:hover {
     background-color: #00ACC1;
 }
 
-.done-button:disabled {
+.home-upload-done-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
