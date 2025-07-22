@@ -170,11 +170,11 @@
 .chart-container {
     flex: 1;
     min-width: 300px;
-    max-width: 550px;
+    max-width: 950px;
     background: linear-gradient(180deg, #ffffff, #f7f9fc);
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;

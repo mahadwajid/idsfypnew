@@ -89,6 +89,16 @@ def generate_synthetic_data(generator, discriminator, test_df, target_count):
 
     return balanced_test_df, synthetic_samples_list, scaler, class_generation_summary
 
+def convert_numpy(obj):
+    if isinstance(obj, dict):
+        return {k: convert_numpy(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_numpy(i) for i in obj]
+    elif hasattr(obj, 'item'):
+        return obj.item()
+    else:
+        return obj
+
 # Main script
 if __name__ == "__main__":
     if len(sys.argv) < 3:
@@ -159,4 +169,4 @@ if __name__ == "__main__":
     balanced_test_df.to_csv(output_path, index=False)
 
     # Print JSON output
-    print(json.dumps(final_output, indent=4))
+    print(json.dumps(convert_numpy(final_output), indent=4))

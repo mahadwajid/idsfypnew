@@ -19,12 +19,12 @@
 }
 
 .navbar-dataset-name {
-  color: #666;
+  color: #ece5e5;
   font-size: 0.9rem;
 }
 
 .navbar-dataset-name strong {
-  color: #333;
+  color: #f8f8f8;
   margin-left: 0.5rem;
 }
 

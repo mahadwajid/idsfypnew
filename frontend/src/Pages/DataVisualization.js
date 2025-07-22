@@ -137,13 +137,13 @@ const DataVisualization = () => {
                 colorScale={['#4caf50', '#f44336']}
                 labels={({ datum }) => `${datum.x}: ${datum.y}`}
                 style={{
-                  labels: { fontSize: 14, fill: '#333', fontWeight: 'bold' },
+                  labels: { fontSize: 12, fill: '#333', fontWeight: 'bold', padding: 10 },
                   parent: { maxWidth: '100%' }
                 }}
-                width={300}
-                height={300}
-                padding={40}
-                labelRadius={({ radius }) => radius - 40}
+                width={350}
+                height={350}
+                padding={60}
+                labelRadius={({ radius }) => radius - 30}
               />
             </div>
             <div className="chart-container">
@@ -153,10 +153,10 @@ const DataVisualization = () => {
               </h3>
               <VictoryChart
                 theme={VictoryTheme.material}
-                domainPadding={{ x: 20, y: 20 }}
-                padding={{ top: 40, bottom: 100, left: 60, right: 40 }}
-                width={500}
-                height={300}
+                domainPadding={{ x: 80, y: 20 }}
+                padding={{ top: 40, bottom: 150, left: 90, right: 40 }}
+                width={900}
+                height={450}
                 containerComponent={
                   <VictoryContainer
                     style={{
@@ -168,12 +168,12 @@ const DataVisualization = () => {
                 <VictoryAxis
                   label="Attack Classes"
                   style={{
-                    axisLabel: { padding: 80, fontSize: 12, fontWeight: 'bold' },
+                    axisLabel: { padding: 120, fontSize: 18, fontWeight: 'bold' },
                     tickLabels: { 
-                      fontSize: 8, 
-                      angle: -45, 
+                      fontSize: 16, 
+                      angle: -20, 
                       textAnchor: 'end',
-                      padding: 5
+                      padding: 18
                     }
                   }}
                 />
@@ -181,8 +181,8 @@ const DataVisualization = () => {
                   dependentAxis
                   label="Sample Count"
                   style={{
-                    axisLabel: { padding: 45, fontSize: 12, fontWeight: 'bold' },
-                    tickLabels: { fontSize: 10 }
+                    axisLabel: { padding: 70, fontSize: 18, fontWeight: 'bold' },
+                    tickLabels: { fontSize: 16 }
                   }}
                 />
                 <VictoryBar
@@ -190,11 +190,11 @@ const DataVisualization = () => {
                   x="x"
                   y="y"
                   style={{
-                    data: { fill: '#f44336', width: 12 },
-                    labels: { fontSize: 8, fill: '#333' }
+                    data: { fill: '#f44336', width: 32 },
+                    labels: { fontSize: 14, fill: '#333' }
                   }}
                   labels={({ datum }) => datum.y}
-                  labelComponent={<VictoryLabel dy={-5} />}
+                  labelComponent={<VictoryLabel dy={-12} />}
                   alignment="middle"
                 />
               </VictoryChart>

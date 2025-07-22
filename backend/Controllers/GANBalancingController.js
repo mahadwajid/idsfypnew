@@ -37,7 +37,7 @@ export const balanceDatasetWithGAN = async (req, res) => {
         }
 
         // Path to the GAN script
-        const ganScriptPath = path.resolve("E:/7th Semester/ids/Server/GANBalancing.py");
+        const ganScriptPath = path.resolve("D:/My Repositories/idsfypnew/backend/GANBalancing.py");
 
         // Run the GAN balancing Python script
         execFile(
